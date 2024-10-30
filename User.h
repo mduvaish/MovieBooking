@@ -2,11 +2,12 @@
 #define USER_H
 
 #include "MovieBookingSystem.h"
+#include <vector>
 
 class User {
 public:
     User(MovieBookingSystem& system);
-    void bookMovie();
+    void bookSeats();
 
 private:
     MovieBookingSystem& bookingSystem;
