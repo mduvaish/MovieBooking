@@ -11,16 +11,18 @@ bool Admin::authenticate() {
     return password == adminPassword;
 }
 
-void Admin::addMovie() {
+void Admin::addTheater() {
     if (authenticate()) {
-        std::string title;
+        std::string theaterName, movieTitle;
         int seats;
-        std::cout << "Enter movie title: ";
+        std::cout << "Enter theater name: ";
         std::cin.ignore();
-        std::getline(std::cin, title);
+        std::getline(std::cin, theaterName);
+        std::cout << "Enter movie title: ";
+        std::getline(std::cin, movieTitle);
         std::cout << "Enter number of seats: ";
         std::cin >> seats;
-        bookingSystem.addMovie(title, seats);
+        bookingSystem.addTheater(theaterName, movieTitle, seats);
     } else {
         std::cout << "Invalid admin password. Access denied.\n";
     }
