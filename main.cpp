@@ -12,8 +12,8 @@ int main() {
     do {
         std::cout << "\nMovie Booking System\n";
         std::cout << "1. Display available theaters and movies\n";
-        std::cout << "2. Book a movie in a theater (User)\n";
-        std::cout << "3. Add a new theater with movie (Admin)\n";
+        std::cout << "2. Book specific seats in a theater (User)\n";
+        std::cout << "3. Add a new theater with a movie (Admin)\n";
         std::cout << "4. Exit\n";
         std::cout << "Enter your choice: ";
         std::cin >> choice;
@@ -23,7 +23,7 @@ int main() {
                 bookingSystem.displayTheaters();
                 break;
             case 2:
-                user.bookMovie();
+                user.bookSeats();
                 break;
             case 3:
                 admin.addTheater();
