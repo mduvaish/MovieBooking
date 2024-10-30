@@ -7,9 +7,9 @@
 
 class MovieBookingSystem {
 public:
-    void addTheater(const std::string& theaterName, const std::string& movieTitle, int seats);
+    void addTheater(const std::string& theaterName, const std::string& movieTitle);
     void displayTheaters() const;
-    bool bookMovieInTheater(const std::string& theaterName, int seats);
+    bool bookSeatsInTheater(const std::string& theaterName, const std::vector<int>& seatNumbers);
 
 private:
     std::vector<Theater> theaters;
