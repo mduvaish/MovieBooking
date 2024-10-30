@@ -7,7 +7,7 @@ class Admin {
 public:
     Admin(MovieBookingSystem& system);
     bool authenticate();
-    void addMovie();
+    void addTheater();
 
 private:
     MovieBookingSystem& bookingSystem;
