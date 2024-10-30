@@ -3,20 +3,23 @@
 
 #include "Movie.h"
 #include <string>
+#include <vector>
 
 class Theater {
 public:
-    Theater(const std::string& theaterName, const Movie& movie, int availableSeats);
+    Theater(const std::string& name, const Movie& movie);
 
     const std::string& getName() const;
     const Movie& getMovie() const;
-    int getAvailableSeats() const;
-    bool bookSeats(int seats);
+    bool isSeatAvailable(int seatNumber) const;
+    bool bookSeats(const std::vector<int>& seatNumbers);
+
+    void displayAvailableSeats() const;
 
 private:
-    std::string theaterName;
+    std::string name;
     Movie movie;
-    int availableSeats;
+    std::vector<bool> seats;  // True if the seat is available, false if booked
 };
 
 #endif // THEATER_H
