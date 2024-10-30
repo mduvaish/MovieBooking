@@ -5,15 +5,11 @@
 
 class Movie {
 public:
-    Movie(const std::string& title, int availableSeats);
-    
+    Movie(const std::string& title);    
     const std::string& getTitle() const;
-    int getAvailableSeats() const;
-    bool bookSeats(int seats);
 
 private:
     std::string title;
-    int availableSeats;
 };
 
 #endif // MOVIE_H
